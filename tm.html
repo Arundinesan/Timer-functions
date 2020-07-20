@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+        <title>switch case </title>
+        <script>
+            /*
+            1.setTimeout()allow you to execute the statment once after an intravel.
+            2,cleartimeout() method clear a timer set with the setTimeout  method.
+            3.setIntravel()  allow you to execute statments REOETEDELY after an intravel.
+            4.clearIntravel() method clear timer set with setIntravel method.
+            */
+            var id=0;
+            var second=0;
+         function msg()
+         {
+             document.getElementById("op").innerHTML=second+"seconds ";
+             second++;
+         }
+         function start()
+         {
+            id= window.setInterval (msg,1000);
+         }
+
+         function stop()
+         {
+             window.clearInterval(id);
+         }
+           
+        </script>
+
+    </head>
+    <body>
+       
+         <button onclick="start()" type="btnstart">start</button>
+         <h2 id="op">sometext =</h2>
+         <button onclick="stop()" type="btnstop">stop</button>
+        
+    </body>
+</html>
